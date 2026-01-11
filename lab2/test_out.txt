@@ -1,0 +1,17 @@
+--- LAB 2: DATA STRUCTURES SETUP ---
+
+Testing Symbol Table Insertion...
+Duplicate 'COPY' rejected correctly.
+Found 'CLOOP' at Address: 1006
+
+[Symbol Table]
+Index	Label	Address
+1	CLOOP	1006
+12	FIRST	1003
+15	COPY	1000
+
+Testing Opcode Table Lookup...
+LDA -> 00
+STA -> 0C
+ADD -> 18
+XYZ -> Invalid Opcode

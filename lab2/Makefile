@@ -10,5 +10,10 @@ symtab.o: symtab.c symtab.h
 optab.o: optab.c optab.h
 	gcc -c optab.c
 
+test: lab2
+	./lab2 > my_output.txt
+	@diff -w -y --suppress-common-lines test_out.txt my_output.txt && echo "✅ Test Passed!" || echo "❌ Test Failed! See differences above."
+	@rm my_output.txt
+
 clean:
 	rm *.o lab2
