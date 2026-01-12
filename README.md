@@ -1,6 +1,38 @@
-# 2026-spring-cs403-lab
+# CS 403: System Software (Spring 2026)
 
-The solutions here for all lab assignments are LLM-generated.
-If you find any mistakes or issues or have suggestions for improvement, please open an issue or submit a pull request.
+> **Lab assignments and reference implementations for CS403. This Readme will evolve as the course progresses.**
 
-You are most welcome to contribute (self-written) solutions in C/C++/Rust.
+## Overview
+Unlike traditional approaches that use a single language, we will use a multi-language strategy in this course.
+This mirrors real-world projects where different components are implemented in languages best suited for those tasks.
+
+* **Core in C:** Performance-critical components are implemented in C.
+* **Foreign Function Interface (FFI):** loading shared C libraries (`.so`) into Python.
+* **System Tooling:** Automating builds and bindings with `make`.
+* **Scripting and Testing:** Using Python for high-level scripting, testing, and validation.
+
+> ### Why bother with FFIs? Why can't I use `dict` instead?!
+This is an exercise to practice hashing algorithms, collision resolution, manual memory management etc, which IMO is a must for a Systems Programming course.
+We then learn how to interface them with higher-level languages like Python.
+In real-world systems, we write in high-level language.
+Then we **profile** (identify bottlenecks), and rewrite only the critical parts in low-level languages like C/C++/Rust. 
+
+## Labs Schedule
+
+### Lab 1: The Symbol Table
+* **Concepts:** Hash Tables and Linear Probing.
+* **Task:** Implement a fixed-size SymTab in C that handles insertions, collisions, and lookups.
+* **Skills:** Refresh pointers and structs in C. Writing own header files.
+
+### Lab 2: Operation Code Table & Makefile
+* **Concepts:** Static Lookup Table and Modular Compilation
+* **Task:** Implement an OpTab. Test both, SymTab and OpTab in a single C program using a Makefile. Write a Makefile to build the test pipeline.
+* **Skills:** Build and test pipelines using Makefiles. 
+
+## Roadmap
+
+### Lab 3: C Bindings for Python
+* **Concepts:** Foreign Function Interface (FFI) and Dynamic Linking
+* **Task:** Compile the C modules into a Shared Object library (`.so`). Use `ctypesgen` to generate Python wrappers for it. Write a Python test script to verify the library and cross-check with a C test script.
+* **Skills:** Creating Shared Libraries and interfacing C with Python. Automating cross-language builds and tests with Makefiles.
+
