@@ -31,30 +31,32 @@ gcc -shared -fPIC -o liblab3.so symtab.c optab.c
 ### Bindings
 Bindings are the "glue code" that acts as a translator to tell Python how a C struct looks like or how to call a C function.
 While you can manually write these bindings using the `ctypes` library, it is tedious and error-prone.
-`ctypesgen` is a tool that automates this.
-It reads your C header files (`.h`), analyzes the structs and function signatures, and auto-generates a pure Python file that can be imported as if it were a normal Python module.
+`ctypesgen` is a tool that automates this[^ctypesgen-warning1].
+It reads your C header files (`.h`), analyzes the structs and function signatures, and auto-generates a pure Python file that can be imported as if it were a normal Python module[^ctypesgen-warning2].
+[^ctypesgen-warning1]: Note that `ctypesgen` may not support all C features perfectly, especially macros or complex structs. However, for the purposes of this lab, it should work fine.
+[^ctypesgen-warning2]: You may get some warnings from `ctypesgen` about syntax errors, but you can ignore them for this lab.
+Look for *INFO: Status: Writing to bindings.py.
+INFO: Status: Wrapping complete.* to confirm that the bindings were generated successfully.
 
 ```Bash
 # Note the missing prefix `lib`: -l lab3 tells it to link against liblab3.so in the current directory (-L .) 
 ctypesgen -l lab3 -L . symtab.h optab.h -o bindings.py
 ```
 
-You may get some warnings from `ctypesgen` about syntax errors, but you can ignore them for this lab.
-Look for *INFO: Status: Writing to bindings.py.
-INFO: Status: Wrapping complete.* to confirm that the bindings were generated successfully.
+
 
 ### Running the Tests
 When you run the Python script, the OS needs to know where to find your custom `.so` file.
+If on Mac, replace `LD_LIBRARY_PATH` with `DYLD_LIBRARY_PATH`.
 
 ```Bash
 python3 lab3.py  #  will fail
-DYLD_LIBRARY_PATH=. LD_LIBRARY_PATH=. python3 lab3.py # correct way
+LD_LIBRARY_PATH=. python3 lab3.py # correct
 ```
 
 ## Write the Makefile to build and test your libraries
 Write your own Makefile that automates the build and test of your libraries.
 If you are stuck for a long time, first look at the provided Makefile for Lab-2 and if you are still stuck, look at the provided Makefile for Lab-3.
-
 To test your implementation, run `make test`.
 
 ## Literal Table
@@ -63,11 +65,11 @@ While we can complete the data structure suite by implementing a Literal Table i
 The skeleton code is provided in `littab.py` that you need to complete.
 You should use `lab3-littab.py` to test your implementation.
 If at the end of the course you (still) prefer C/C++, you can always come back and implement it in C/C++ and share it through `liblab3.so` later.
-Use the following interface for the Literal Table:
+Complete the missing functions in `littab.py`.
 
 
 ## tl;dr
-- Run `make test` to build and test your C libraries. If it gives failed LitTab test, that's expected!
+- Run `make test` to build and test your C libraries. It gives failed LitTab test, that's expected!
 - Implement `littab.py` following the provided interface.
 - Run `make test` to test your Literal Table implementation in Python. It should give "✅ All Tests Passed."
 
