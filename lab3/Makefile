@@ -44,7 +44,6 @@ test: all
 	@python3 lab3-littab.py > /dev/null && echo "✅ Python LitTab Tests Passed!" || (echo "❌ Python LitTab Tests Failed!"; exit 1)
 
 	@echo "\n✅ All Tests Passed."
-	
 
 # Clean Artifacts
 clean:
