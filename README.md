@@ -22,21 +22,26 @@ Then we **profile** (identify bottlenecks), and rewrite only the critical parts 
 ### Lab 1: Symbol Table
 * **Concepts:** Hash Tables and Linear Probing.
 * **Task:** Implement a fixed-size SymTab in C that handles insertions, collisions, and lookups.
-* **Skills:** Refresh pointers and structs in C. Writing own header files.
+* **Skills:** Writing own header files.
 
 ### Lab 2: Operation Code Table & Makefile
 * **Concepts:** Static Lookup Table and Modular Compilation
 * **Task:** Implement an OpTab. Test both, SymTab and OpTab in a single C program using a Makefile. Write a Makefile to build the test pipeline.
 * **Skills:** Build and test pipelines using Makefiles. 
 
-## Roadmap
-
 ### Lab 3: C Bindings for Python
 * **Concepts:** Foreign Function Interface (FFI) and Dynamic Linking
-* **Task:** Compile the C modules into a Shared Object library (`.so`). Use `ctypesgen` to generate Python wrappers for it. Write a Python test script to verify the library and cross-check with a C test script.
-* **Skills:** Creating Shared Libraries and interfacing C with Python. Automating cross-language builds and tests with Makefiles.
+* **Task:** Compile the C modules into a Shared Object library (`.so`). Use `ctypesgen` to generate Python wrappers for it. Build LitTab as Python module. Write a Python test script to verify the library and cross-check with a C test script.
+* **Skills:** Creating Shared Libraries and interfacing C with Python.
+
+## Roadmap
+
 
 ### Lab 4: Assembler Pass 1
+* **Concepts:** Two-Pass Assembler, Symbol Resolution, and Intermediate Representation
+* **Task:** Implement the first pass of a two-pass assembler in Python using bindings to the SymTab and OpTab C libraries along with the LitTab Python module from Lab 3.
+* **Skills**: File I/O in Python and Hybrid Data Structures.
+
 
 ### Lab 5: Assembler Pass 2
 
