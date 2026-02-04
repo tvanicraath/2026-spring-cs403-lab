@@ -39,7 +39,9 @@ Look for *INFO: Status: Writing to bindings.py.
 INFO: Status: Wrapping complete.* to confirm that the bindings were generated successfully.
 
 ```Bash
-# Note the missing prefix `lib`: -l lab3 tells it to link against liblab3.so in the current directory (-L .) 
+# Note the missing prefix `lib`:
+# -l lab3 tells it to link against liblab3.so
+# in the current directory (-L .) 
 ctypesgen -l lab3 -L . symtab.h optab.h -o bindings.py
 ```
 

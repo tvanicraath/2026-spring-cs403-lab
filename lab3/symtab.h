@@ -1,12 +1,12 @@
 #ifndef SYMTAB_H
 #define SYMTAB_H
 
-#define SYMTAB_SIZE 20  // Increased size for Lab 2
-#define SYMBOL_LEN 10   
+#define SYMTAB_SIZE 20000  // Increased size for future
+#define SYMBOL_LEN 20 // Increased size for future
 
 typedef struct {
     char symbol[SYMBOL_LEN];
-    int address;        // <--- ADDED: Critical for an Assembler
+    int address;
     int is_occupied;    
 } SymNode;
 
