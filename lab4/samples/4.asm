@@ -1,5 +1,5 @@
 COPY    START   1000
-FIRST   LDA     ALPHA
+FIRST   LDA     ALPHA7
         ADD     ONE
         STA     BETA
 ALPHA1   RESW    1

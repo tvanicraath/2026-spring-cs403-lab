@@ -26,15 +26,13 @@ Then we **profile** (identify bottlenecks), and rewrite only the critical parts 
 
 ### Lab 2: Operation Code Table & Makefile
 * **Concepts:** Static Lookup Table and Modular Compilation
-* **Task:** Implement an OpTab. Test both, SymTab and OpTab in a single C program using a Makefile. Write a Makefile to build the test pipeline.
+* **Task:** Implement and test OpTab.
 * **Skills:** Build and test pipelines using Makefiles. 
 
 ### Lab 3: C Bindings for Python
 * **Concepts:** Foreign Function Interface (FFI) and Dynamic Linking
-* **Task:** Compile the C modules into a Shared Object library (`.so`). Use `ctypesgen` to generate Python wrappers for it. Build LitTab as Python module. Write a Python test script to verify the library and cross-check with a C test script.
+* **Task:** Compile the C modules into a Shared Object library (`.so`) and use `ctypesgen` to generate Python wrappers for it. Build LitTab as Python module. Use the Python test script to verify the library and cross-check with the C test script.
 * **Skills:** Creating Shared Libraries and interfacing C with Python.
-
-## Roadmap
 
 
 ### Lab 4: Assembler Pass 1
@@ -43,14 +41,19 @@ Then we **profile** (identify bottlenecks), and rewrite only the critical parts 
 * **Skills**: File I/O in Python and Hybrid Data Structures.
 
 
+## Roadmap
+
 ### Lab 5: Assembler Pass 2
+* **Concepts:** Two-Pass Assembler and Object Code Generation
+* **Task:** Implement the second pass of the assembler to generate object code from the intermediate representation produced in Pass 1.
+* **Skills:** Addressing Modes in Assembly and Simulating SIC Machine
 
-### Lab 6: Macro Processor
+### Lab 6: Lexical Analyzer
 
-### Lab 7: Lexical Analyzer
+### Lab 7: Parser
 
-### Lab 8: Parser
+### Lab 8: Intermediate Code Generation
 
-### Lab 9: Intermediate Code Generation and Optimization
+### Lab 9: Optimization
 
 ### Lab 10: Linker and Loader
