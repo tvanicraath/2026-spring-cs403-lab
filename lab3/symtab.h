@@ -1,7 +1,7 @@
 #ifndef SYMTAB_H
 #define SYMTAB_H
 
-#define SYMTAB_SIZE 20000  // Increased size for future
+#define SYMTAB_SIZE 20  // Increased size for future
 #define SYMBOL_LEN 20 // Increased size for future
 
 typedef struct {
