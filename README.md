@@ -40,15 +40,17 @@ Then we **profile** (identify bottlenecks), and rewrite only the critical parts 
 * **Task:** Implement the first pass of a two-pass assembler in Python using bindings to the SymTab and OpTab C libraries along with the LitTab Python module from Lab 3.
 * **Skills**: File I/O in Python and Hybrid Data Structures.
 
-
-## Roadmap
-
 ### Lab 5: Assembler Pass 2
 * **Concepts:** Two-Pass Assembler and Object Code Generation
 * **Task:** Implement the second pass of the assembler to generate object code from the intermediate representation produced in Pass 1.
 * **Skills:** Addressing Modes in Assembly and Simulating SIC Machine
 
-### Lab 6: Lexical Analyzer
+## Roadmap
+
+### Lab 6: MiniC Lexer
+* **Concepts:** Regular Expressions and Language Design
+* **Task:** Implement a lexical analyzer with SLY that reads MiniC source code and produces a stream of tokens.
+* **Skills:** Lexical Analysis and Tokenization with SLY.
 
 ### Lab 7: Parser
 
